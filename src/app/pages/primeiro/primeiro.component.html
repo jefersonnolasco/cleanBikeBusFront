@@ -1,0 +1,36 @@
+<div class="container">
+<h1>Curso de Angular</h1>
+<h2>Signals</h2>
+
+
+<app-signal1></app-signal1>
+
+<app-p1></app-p1>
+
+
+<h2 #trigger>INTERACTION -clique-me</h2>
+@defer(on interaction(trigger)){
+  <app-quadrado />
+} @placeholder {
+  <p>DEFERRABLE mostrar antes de carregar o quadrado</p>
+} @loading {
+  <p>Loading Quadrado...</p>
+} @error {
+  <p>Error Loading Failed</p>
+}
+
+
+
+<div style="margin-bottom: 500px; background-color:red">.</div>
+@defer(on viewport){
+  <app-quadrado />
+} @placeholder {
+  <p>DEFERRABLE mostrar antes de carregar o quadrado</p>
+} @loading {
+  <p>Loading Quadrado...</p>
+} @error {
+  <p>Error Loading Failed</p>
+}
+
+
+</div>

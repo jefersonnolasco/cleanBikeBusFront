@@ -1,0 +1,15 @@
+<p>SIGNALS 1</p>
+<p>first + last Name: <strong> {{firstName()}} {{lastName()}}</strong></p>
+<p>FullName: <strong> {{fullName()}}</strong></p>
+
+<ul>
+  @for(item of array(); track item) {
+    <li>{{item}}</li>
+  }
+</ul>
+
+primeiro nome:<input type="text" [(ngModel)]="nome1"><br>
+ultimo nome:<input type="text" [(ngModel)]="nome2"><br>
+
+<button (click)="updateName()">Update Name</button>
+<button (click)="updateArray()">Update Array</button>
